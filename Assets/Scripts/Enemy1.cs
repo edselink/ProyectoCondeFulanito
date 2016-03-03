@@ -28,11 +28,11 @@ public class Enemy1 : Actor {
 		//hit = actions.check (GameObject.FindGameObjectWithTag ("player").GetComponent<Transform>().position, 3f);
 		if(actions.patrolRunning == false)
 			StartCoroutine (actions.patrol (Vector2.left, 2, 2, 3));
-		/*if (Physics.Raycast(gameObject.transform.position, GameObject.FindGameObjectWithTag ("player").transform.position, out hit, 3f))
-			if(hit.collider.tag == "player")
-				Debug.Log("Found the player!");*/
-		if(actions.check(GameObject.FindGameObjectWithTag ("player").transform.position, 3f)) {
-			if(actions.HitInfo.collider.tag == "player")
+		if (Physics.Raycast(gameObject.transform.position, GameObject.FindGameObjectWithTag ("Player").transform.position, out hit, 3f))
+			if(hit.collider.tag == "Player")
+				Debug.Log("Found the player!");
+		if(actions.check(GameObject.FindGameObjectWithTag ("Player").transform.position, 3f)) {
+			if(actions.HitInfo.collider.tag == "Player")
 				Debug.Log ("Found the player!");
 		}
 	}

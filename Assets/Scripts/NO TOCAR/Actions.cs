@@ -10,7 +10,7 @@ public class Actions : Raycast {
 	// Propiedades
 	public Vector2 Velocity { get; set; }
 
-	public Rigidbody2D RB2D { get; set; }
+	public Rigidbody RB2D { get; set; }
 
 	public float BaseChance { get; set; }
 	
@@ -121,6 +121,6 @@ public class Actions : Raycast {
 
 	// Metodos Unity
 	void Start() {
-		RB2D = gameObject.GetComponent<Rigidbody2D> ();
+		RB2D = gameObject.GetComponent<Rigidbody> ();
 	}
 }
